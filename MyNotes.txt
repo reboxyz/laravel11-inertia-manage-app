@@ -1,0 +1,28 @@
+Laravel 11 + React Full Stack App with Inertia - Project Management App
+By Codeholic
+
+16:00, 23:41, 48:00, 59:00, 1:17, 1:25, 1:38, 1:52, 2:22, 2:34, 2:55, 3:10, 3:34, 3:40
+3:57, 4:12, 4:30, 4:59, 5:08, 5:21
+
+Links:
+https://github.com/tailwindlabs/heroicons
+
+composer create-project laravel/laravel laravel11-react-inertia-manage-app
+composer require laravel/breeze --dev
+php artisan breeze:install
+  # react inertia, darkmode, pest
+php artisan make:model Project -fm
+php artisan make:model Task -fm 
+php artisan migrate --seed # run migration and db factory seed
+php artisan migrate:refresh # drop all tables and re-execute migration
+php artisan db:seed  # run db seed
+php artisan make:controller ProjectController --model=Project --requests --resource
+php artisan make:controller TaskController --model=Task --requests --resource
+php artisan make:controller UserController --model=User --requests --resource
+php artisan route:list
+php artisan make:resource ProjectResource
+ php artisan make:resource TaskResource
+php artisan make:resource UserResource
+php artisan storage:link # [public/storage] link has been connected to [storage/app/public]
+  
+
